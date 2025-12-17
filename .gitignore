@@ -1,0 +1,10 @@
+outputs/
+
+
+outputs/
+*.faiss
+*.pkl
+
+
+__pycache__/
+.venv/

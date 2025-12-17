@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Enterprise-Grade RAG Platform for Financial Data.iml" filepath="$PROJECT_DIR$/Enterprise-Grade RAG Platform for Financial Data.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Step5_Backend/Step6_backend.iml" filepath="$PROJECT_DIR$/Step5_Backend/Step6_backend.iml" />
     </modules>
   </component>
 </project>

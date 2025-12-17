@@ -138,18 +138,20 @@ import faiss
 import numpy as np
 import pickle
 from sentence_transformers import SentenceTransformer, CrossEncoder
+from pathlib import Path
 
 # =========================
 # CONFIG
 # =========================
-FAISS_INDEX_PATH = "sec_index.faiss"
-METADATA_PATH = "sec_metadata.pkl"
+ROOT_DIR = Path(__file__).resolve().parent.parent
+FAISS_INDEX_PATH = ROOT_DIR / "outputs/sec_index.faiss"
+METADATA_PATH =  ROOT_DIR / "outputs/sec_metadata.pkl"
 
 EMBED_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
 RERANK_MODEL = "cross-encoder/ms-marco-MiniLM-L-6-v2"
 
-TOP_K = 10   # FAISS retrieval
-TOP_N = 3    # After reranking
+TOP_K = 5   # FAISS retrieval    10
+TOP_N = 2    # After reranking   3
 
 # =========================
 # LOAD MODELS
@@ -160,7 +162,7 @@ reranker = CrossEncoder(RERANK_MODEL)
 # =========================
 # LOAD FAISS INDEX
 # =========================
-index = faiss.read_index(FAISS_INDEX_PATH)
+index = faiss.read_index(str(FAISS_INDEX_PATH))
 
 # =========================
 # LOAD METADATA
