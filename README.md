@@ -41,10 +41,12 @@ Backend:
 python -m uvicorn Step5_Backend.app:app --reload
 
 Open:
-http://127.0.0.1:8000/docs
+http://127.0.0.1:8000/docs 
 
 UI:
 Open ui.html in browser
 
 ## Example Query
 What are the main risk factors mentioned by Apple?
+
+![UI_Image.png](UI_Image.png)
